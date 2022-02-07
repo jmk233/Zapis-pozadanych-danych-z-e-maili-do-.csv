@@ -1,4 +1,7 @@
 # Zapis-pozadanych-danych-z-e-maili-do-.csv
+
+To mój pierwszy program, który zrobiłem w Pythonie.
+
 Program, który pobiera maile ze skrzynki, potem wybieram interesującą mnie cześć każdego maila i zapisuję w wybranej formi do pliku .csv
 
 Prosty program do automatyzacji i przejrzystej wizualizacji statusów wykonywanych kopii zapasowych komputerów.
