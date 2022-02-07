@@ -1,4 +1,4 @@
-# Zapis-pozadanych-danych-z-e-maili-do-.csv
+# Save email data to csv with python
 
 To mój pierwszy program, który zrobiłem w Pythonie.
 
