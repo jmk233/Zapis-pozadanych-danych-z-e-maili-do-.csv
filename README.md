@@ -1,4 +1,36 @@
 # Save email data to csv with python
+This is my first program that I made in Python.
+
+A program that downloads e-mails from the mailbox, then I select the part of each e-mail that interests me and save it in a selected format to a .csv file
+
+A simple program for the automation and transparent visualization of the status of computer backups.
+I used Veeam Backup to make the backup:
+https://www.veeam.com/pl
+After proper configuration - giving the appropriate name for the copy task, in my case it was the name of the client, setting the sending of e-mails after making a copy with the information:
+[SUCCESS], [WARNING], [FAILED]. I configured myself so that the subject of the e-mail is: Client XXX - [FAILED].
+I also needed to extract the date of each e-mail.
+
+The first step is to use a ready-made script to download e-mails, there are many of them, I will not paste / show it. Perhaps they are better / easier. However, the one I used downloaded all e-mails with all the data, my program was to extract what I needed from this e-mail:
+- customer name
+- date of the copy
+
+I wanted to shorten the entry, so I used a condition that put three options 'ok', 'not ok' or 'check' in the 'status' table in case of finding 'success', 'failed' or 'warning' in the e-mail subject.
+
+Then I needed the current date and the difference of dates, because sometimes the copy was not done at all, i.e. the computer was turned off. I needed some simple informer that the copy is not made, for example, for more than 3 days (because, for example, it was not made after the weekend).
+
+The last problem was filtering the content so that one client has only one row in the sheet - I am not interested in whether the client's copy was made a week ago or what status it had at that time, I am interested in its last status or when the last time it was done.
+
+I placed the data arranged in this way in the .csv file, separated by a comma, arranged in the appropriate columns:
+
+Subject; Status; Date; Today's Date; How many days since the last copy
+
+Each new e-mail is written on the next line. For my own, I uploaded a convenient .csv file to the ftp server, where I formatted it with the php language into an html table and used it as a template in Wordpress. Using javascript, I colored the 'status' fields (ok green, not red) and the number over 3 days from the last copy (also red).
+
+I now have an up-to-date inspection of copies with my customers on hand. 
+
+
+---
+Polish version:
 
 To mój pierwszy program, który zrobiłem w Pythonie.
 
